@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+
+        />
+    <item
+        android:id="@+id/dilay"
+        android:title="DilayActivity"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        />
+
+
+        <item
+            android:id="@+id/favorite"
+            android:title="Favorite"
+            android:icon="@drawable/ic_favorite"
+            />
+
+        <item
+            android:id="@+id/galery"
+            android:title="Gallery"
+            android:icon="@drawable/ic_baseline_image_24"
+            />
+
+            <item
+                android:id="@+id/myacount"
+                android:title="Contact"
+                android:icon="@drawable/ic_account"
+                />
+</menu>

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/almendra_bold</item>
         <item>@font/anton</item>
+        <item>@font/arbutus</item>
         <item>@font/archivo_narrow</item>
         <item>@font/asset</item>
         <item>@font/bevan</item>
         <item>@font/biorhyme_extralight</item>
+        <item>@font/bungee</item>
+        <item>@font/carter_one</item>
+        <item>@font/days_one</item>
     </array>
 </resources>
