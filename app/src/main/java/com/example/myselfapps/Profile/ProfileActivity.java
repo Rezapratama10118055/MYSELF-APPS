@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.myselfapps.Daily.DailyAcitivtyini;
 import com.example.myselfapps.Favorite.MusicFavoriteActivity;
@@ -27,6 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
     private Button ShowDialog;
     private Button ShowPeta;
     private Button button;
+    private TextView sosial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class ProfileActivity extends AppCompatActivity {
         peta();
         call();
         tombol();
+        sosialmedia();
 
         ShowDialog = findViewById(R.id.about);
         ShowDialog.setOnClickListener(new View.OnClickListener() {
@@ -122,6 +125,20 @@ public class ProfileActivity extends AppCompatActivity {
                 }
 
                 return false;
+            }
+        });
+    }
+    private void sosialmedia(){
+        TextView sosialni = findViewById(R.id.sosial);
+        sosialni.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("https://www.instagram.com/repram21/"));
+                startActivity(intent);
+
             }
         });
     }
