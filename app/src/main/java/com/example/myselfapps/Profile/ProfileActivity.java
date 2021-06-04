@@ -44,7 +44,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final Dialog dialog = new Dialog(ProfileActivity.this);
 
-                dialog.setTitle("TWOH.Co");
+                dialog.setTitle("Tentang Saya");
                 dialog.setContentView(R.layout.activity_about);
                 Button DialogButton = dialog.findViewById(R.id.ok);
                 DialogButton.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class ProfileActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"rezapr21@gmail.com"});
-//        intent.putExtra(Intent.EXTRA_CC, new String[] {"guntoroagun@gmail.com"});
+
         intent.putExtra(Intent.EXTRA_SUBJECT, "Email dari Aplikasi Android");
         intent.putExtra(Intent.EXTRA_TEXT, "Hai, ini adalah percobaan mengirim email dari aplikasi android");
 
@@ -87,14 +87,9 @@ public class ProfileActivity extends AppCompatActivity {
 
       button.setOnClickListener(new View.OnClickListener() {
         public void onClick(View arg0) {
-            Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData(Uri.parse("tel:087894803437"));
-
-            if (ActivityCompat.checkSelfPermission(ProfileActivity.this,
-                    Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                return;
-            }
-            startActivity(callIntent);
+            String phoneNumber = "087894803437";
+            Intent dialPhoneIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNumber));
+            startActivity(dialPhoneIntent);
         }
     });
 
